@@ -10,9 +10,7 @@ import Joke from "/components/Jokes";
 const App = () => {
   return (
     <div>
-      <Joke question="Insert Funny Joke Here" joke="Here is a punchline" />
-      <Joke question="This one has no punchline!" />
-      <Joke joke="This has no question!" />
+     <MainContent />
     </div>
   );
 };
