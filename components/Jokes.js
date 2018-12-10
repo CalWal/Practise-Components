@@ -15,7 +15,7 @@ function Jokes(props) {
   return (
     <div>
       <h1 style={QuestionStyle}>Question: {props.question}</h1>
-      <h2 style={AnswerStyle}>Answer: {props.joke}</h2>
+      <h2 style={AnswerStyle}>Answer: {props.punchLine}</h2>
       <hr />
     </div>
   );
