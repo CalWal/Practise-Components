@@ -10,17 +10,19 @@ import jokesData from "/data/jokesData";
 import Products from "/components/Products";
 import productsData from "/data/productsData";
 
-const App = () => {
-  const productComponents = productsData.map(products => (
-    <Products
-      key={products.id}
-      name={products.name}
-      price={products.price}
-      description={products.description}
-    />
-  ));
+class App extends React.Component {
+  render() {
+    const productComponents = productsData.map(products => (
+      <Products
+        key={products.id}
+        name={products.name}
+        price={products.price}
+        description={products.description}
+      />
+    ));
 
-  return <div>{productComponents}</div>;
-};
+    return <div>{productComponents}</div>;
+  }
+}
 
 ReactDOM.render(<App />, document.getElementById("root"));
