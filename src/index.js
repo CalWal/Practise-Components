@@ -6,14 +6,21 @@ import MainContent from "/components/MainContent";
 import Footer from "/components/Footer";
 import Todo from "/components/Todo";
 import Jokes from "/components/Jokes";
-import jokesData from "./jokesData";
+import jokesData from "/data/jokesData";
+import Products from "/components/Products";
+import productsData from "/data/productsData";
 
 const App = () => {
-  const jokeComponents = jokesData.map(joke => (
-    <Jokes key={joke.id} question={joke.question} punchLine={joke.punchLine} />
+  const productComponents = productsData.map(products => (
+    <Products
+      key={products.id}
+      name={products.name}
+      price={products.price}
+      description={products.description}
+    />
   ));
 
-  return <div>{jokeComponents}</div>;
+  return <div>{productComponents}</div>;
 };
 
 ReactDOM.render(<App />, document.getElementById("root"));
