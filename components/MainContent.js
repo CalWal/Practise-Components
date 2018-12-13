@@ -1,8 +1,14 @@
 import React from "react";
 
 class MainContent extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      text: "This is the main content of the app"
+    };
+  }
   render() {
-    return <p> This is the main content of the app </p>;
+    return <div>{this.state.text}</div>;
   }
 }
 
