@@ -21,7 +21,13 @@ class App extends React.Component {
       />
     ));
 
-    return <div>{productComponents}</div>;
+    return (
+      <div>
+        <NavBar />
+        {productComponents}
+        <Footer />
+      </div>
+    );
   }
 }
 

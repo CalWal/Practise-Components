@@ -1,10 +1,16 @@
 import React from "react";
 
 class Footer extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      text: "Hey im down here!"
+    };
+  }
   render() {
     return (
       <div>
-        <footer>Hey there here is the footer!</footer>
+        <footer>{this.state.text}</footer>
       </div>
     );
   }
