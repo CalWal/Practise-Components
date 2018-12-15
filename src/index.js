@@ -9,6 +9,7 @@ import Jokes from "/components/Jokes";
 import jokesData from "/data/jokesData";
 import Products from "/components/Products";
 import productsData from "/data/productsData";
+import HandlingEvents from "/components/HandlingEvents";
 
 class App extends React.Component {
   render() {
@@ -24,7 +25,7 @@ class App extends React.Component {
     return (
       <div>
         <NavBar />
-        {productComponents}
+        <HandlingEvents />
         <Footer />
       </div>
     );
