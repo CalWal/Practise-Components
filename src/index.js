@@ -10,8 +10,24 @@ import jokesData from "/data/jokesData";
 import Products from "/components/Products";
 import productsData from "/data/productsData";
 import HandlingEvents from "/components/HandlingEvents";
+import Loading from "/components/Loading";
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      isLoading: true
+    };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        isLoading: false
+      });
+    }, 7000);
+  }
+
   render() {
     const productComponents = productsData.map(products => (
       <Products
@@ -24,9 +40,11 @@ class App extends React.Component {
 
     return (
       <div>
-        <NavBar />
-        <HandlingEvents />
-        <Footer />
+        {this.state.isLoading ? (
+          <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" />
+        ) : (
+          <Loading />
+        )}
       </div>
     );
   }
