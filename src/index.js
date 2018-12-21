@@ -11,6 +11,7 @@ import Products from "/components/Products";
 import productsData from "/data/productsData";
 import HandlingEvents from "/components/HandlingEvents";
 import Loading from "/components/Loading";
+import Login from "/components/Login";
 
 class App extends React.Component {
   constructor() {
@@ -40,11 +41,7 @@ class App extends React.Component {
 
     return (
       <div>
-        {this.state.isLoading ? (
-          <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" />
-        ) : (
-          <Loading />
-        )}
+        <Login />
       </div>
     );
   }
