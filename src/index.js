@@ -12,6 +12,7 @@ import productsData from "/data/productsData";
 import HandlingEvents from "/components/HandlingEvents";
 import Loading from "/components/Loading";
 import Login from "/components/Login";
+import StarWars from "/components/StarWars";
 
 class App extends React.Component {
   constructor() {
@@ -41,7 +42,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <Login />
+        <StarWars />
       </div>
     );
   }
